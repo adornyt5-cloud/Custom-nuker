@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 TradeX Nuke Bot Builder 🔥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TradeX Nuke Bot Builder</h1>
+        
+        <div class="card">
+            <h2>Bot Configuration</h2>
+            
+            <div class="form-group">
+                <label for="botToken">Bot Token:</label>
+                <input type="password" id="botToken" placeholder="Enter your Discord bot token">
+            </div>
+            
+            <div class="form-group">
+                <label for="botName">Bot Name:</label>
+                <input type="text" id="botName" placeholder="Enter your bot name">
+            </div>
+            
+            <div class="form-group">
+                <label for="channelCount">Number of Channels:</label>
+                <input type="number" id="channelCount" value="1000" min="1" max="5000">
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Spam Messages</h2>
+            <div id="spamMessages">
+                <div class="form-group">
+                    <input type="text" class="spam-input" placeholder="@everyone SERVER NUKED BY TRADEX">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="spam-input" placeholder="@everyone TRADEX OWNS THIS SERVER">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="spam-input" placeholder="@everyone FUCKED BY TRADEX">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="spam-input" placeholder="IF U CANT BEAT US , JOIN US!! https://discord.gg/YbTCmRvhsG">
+                </div>
+            </div>
+            <button onclick="addSpamMessage()">+ Add Message</button>
+        </div>
+        
+        <div class="card">
+            <h2>Channel Names</h2>
+            <div id="channelNames">
+                <div class="form-group">
+                    <input type="text" class="channel-input" placeholder="💀-destroyed-by-tradex-💀">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="channel-input" placeholder="🔥-tradex-was-here-🔥">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="channel-input" placeholder="⚡-server-owned-⚡">
+                </div>
+            </div>
+            <button onclick="addChannelName()">+ Add Channel Name</button>
+        </div>
+        
+        <div class="card">
+            <h2>Generate Bot</h2>
+            <button onclick="generateBot()" class="generate-btn">🚀 Generate Nuke Bot</button>
+            <div id="output" class="output"></div>
+            <button onclick="downloadBot()" class="control-btn" style="margin-top: 10px; display: none;" id="downloadBtn">
+                💾 Download Bot.py
+            </button>
+        </div>
+    </div>
+    
+    <script src="builder.js"></script>
+</body>
+</html>
